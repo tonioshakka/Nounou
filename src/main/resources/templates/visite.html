@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style.css">
+    <title>La visite de chez la nounou d'enfer</title>
+</head>
+<body>
+<h1>Une nounou d'enfer à Scrignac</h1>
+		<div th:replace="~{/fragments/fragment-entete :: fragment-entete}"></div>
+
+<br>
+<section>
+    
+    <div id="carouselControl" class="carousel_slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item-active">
+            <div title="Une nounou joueuse"><img class="d-block w-100" src="img/jeu_action.jpg" alt="de nombreux jeux">
+        </div></div>
+        <div class="carousel-item-active">
+            <div title="De nombreux jeux et jouets à disposition"><img class="d-block w-100" src="img/zone_activite.jpg" alt="de nombreuses activités et jeux">
+        </div></div>
+            <div class="carousel-item-active">
+            <div title="une zone d'éveil et de developpement cosy"><img class="d-block w-100" src="img/zone_jeu2.jpg" alt="espace éveil et developpement">
+        </div></div>
+            <div class="carousel-item-active">
+            <div title="une zone challeureuse et stimulante"><img class="d-block w-100" src="img/zone_jeu3.jpg" alt="espace éveil et developpement">
+        </div></div>
+            <div class="carousel-item-active">
+            <div title="Même en cuisinant, nounou a toujours les enfants en vue"><img class="d-block w-100" src="img/zone-jeu.jpg" alt="grand espace ouvert où nounou peut surveiller les enfants même en cuisinant">
+        </div></div>
+            <div class="carousel-item-active">
+            <div title="Un endroit sécurisant et confortable"><img class="d-block w-100" src="img/zone-jeu2b.jpg" alt="un espace chaleureux et agréable">
+        </div></div>
+            <div class="carousel-item-active">
+            <div title="Tout est à disposition pour l'éveil et la curiosité"></div><img class="d-block w-100" src="img/zone-lecture.jpg" alt="zone éveil à la lecture">
+        </div></div>
+    
+    </div>
+     <button id="prevButton">Back</button>
+    <button id="nextButton">Next</button>
+    
+    <script src="car.js"></script>
+</section>
+</body>
+</html>
