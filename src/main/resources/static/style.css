@@ -1,137 +1,129 @@
-
-h1, h2 , h3 {    
+h1, h2, h3 {    
     color: red;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
-h1{
+h1 {
     font-size: 5rem;
 }
-h2{
+
+h2 {
     text-decoration: underline;
     font-style: italic;
-    font-style: bold;
+    font-weight: bold;
 }
-h3{
+
+h3 {
     color: darkcyan;
     text-decoration: underline;
     font-size: 3rem;
 }
-body{
+
+body {
     background-color: #eff0ca;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    
 }
-nav{
-	display: flex;
-	justify-content: space-around;
+
+nav {
+    display: flex;
+    justify-content: space-around;
     background-color: #feb1fc;
     font-size: 3rem;
-    
-    
-}
-img{
-    display: flex;
+    width: 100%;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
 }
+
+img {
+    max-width: 80%;
+    height: auto;
+}
+
 a img {
     display: block;
     margin: 0 auto;
 }
 
-#nounou{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
+/* Définir la largeur du conteneur */
+.carousel-container {
+    width: 80%;
+    height: auto;
+    position: relative; /* Pour que les boutons soient positionnés relativement au conteneur */
+    margin: 0 auto; /* Centrer le conteneur horizontalement */
 }
 
-#carouselControl{
-    display: flex;
-    justify-content: center;
-
-}
-#prevButton,
-#nextButton {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: blue;
-    /* Couleur de fond */
-    color: #fff;
-    /* Couleur du texte */
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 1000;
-    /* Assure que les boutons apparaissent au-dessus des images */
+#carouselControl {
+    width: 100%; /* Utiliser toute la largeur du conteneur */
 }
 
-#prevButton:hover,
-#nextButton:hover {
-    background-color: red;
-    /* Changement de couleur au survol */
-}
-#prevButton {
-    left: 10px;
-    /* Positionne le bouton "Previous" à gauche */
+.carousel-inner {
+    overflow: hidden; /* Masquer tout débordement des images */
 }
 
-#nextButton {
-    right: 10px;
-    /* Positionne le bouton "Next" à droite */
+.carousel-item img {
+    width: 100%; /* Remplit la largeur du conteneur */
+    height: 100%; /* Remplit la hauteur du conteneur */
+    object-fit: cover; /* Couvre le conteneur tout en conservant les proportions */
 }
 
-.carousel-item-active div {
-    position: relative;
+
+
+/* Styles pour les boutons de contrôle */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    border: none; /* Retirer les bordures par défaut */
+    color: white; /* Couleur du texte des icônes */
+    font-size: 2rem; /* Taille des icônes */
+    position: absolute; /* Positionnement absolu */
+    top: 50%; /* Centrer verticalement */
+    transform: translateY(-50%); /* Ajuster le centrage */
 }
 
-.carousel-item-active div::before {
-    content: attr(title);
-        position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 5px;
-    box-sizing: border-box;
-    z-index: 1;
-    font-size: 2vw;
+.carousel-control-prev {
+    left: -2.5%; /* Déplacer le bouton vers la gauche */
 }
 
-fieldset {
-    background-color: rgb(252, 60, 236);
-    border-radius: 5%;
-    font-size: 3rem;
-    font-weight: bold;
+.carousel-control-next {
+    right: -2.5%; /* Déplacer le bouton vers la droite */
 }
 
-input, textarea{
-    background-color: rgb(206, 248, 42);
-    font-size: 2rem;
+/* Options de survol */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Changer la couleur du fond lors du survol */
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-button {
-    background-color: pink;
-    color: white;
-    border-style: double;
-    border-color: brown;
-    height: 5em;
-    width: 20em;
-    font: bold15px arial, sans-serif;
-    text-shadow: none;
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        font-size: 2rem;
+    }
+
+    button {
+        width: 15em;
+        height: 4em;
+    }
+
+    #carouselControl {
+        width: 100%;
+    }
+
+    .carousel-caption {
+        font-size: 3vw;
+    }
 }
